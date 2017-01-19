@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: myspringbootapi
+
+
+server:
+  port: 8090

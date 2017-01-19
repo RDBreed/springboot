@@ -1,3 +1,7 @@
 *.iml
-MySpringBootApp/.idea
-MySpringBootApp/target
+my-springboot-api/.idea
+my-springboot-api/target
+my-zuul-router/target
+my-zuul-router/.idea
+my-eureka-server/target
+my-eureka-router/.idea
