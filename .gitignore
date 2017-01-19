@@ -1,4 +1,5 @@
 *.iml
+.idea
 my-springboot-api/.idea
 my-springboot-api/target
 my-zuul-router/target

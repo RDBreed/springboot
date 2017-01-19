@@ -13,7 +13,7 @@ public class RandomQuoteService {
 
 
     @RequestMapping(method=RequestMethod.GET, path="/quote")
-    public @ResponseBody Quote getQuote(@PathVariable  int id) {
+    public @ResponseBody Quote getQuote() {
         RestTemplate restTemplate = new RestTemplate();
         Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
         return quote;
