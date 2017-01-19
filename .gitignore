@@ -5,4 +5,4 @@ my-springboot-api/target
 my-zuul-router/target
 my-zuul-router/.idea
 my-eureka-server/target
-my-eureka-router/.idea
+my-eureka-server/.idea
