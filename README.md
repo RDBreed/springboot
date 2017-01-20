@@ -1,4 +1,4 @@
-# SpringBoot Test Project
+# SpringBoot Zuul / Eureka Example Project
 Spring Boot test repository that consists of
 - Zuul API Proxy (my-zuul-router): Demo Zuul proxy configured to use Eureka for service discovery, Ribbon for client-side loadbalancing and Hysterix as circuit breaker to improve resiliency
 - Eureka server  (my-eureka-server): Eureka server used for service discovery and client-side loadbalancing in Zuul
@@ -17,4 +17,5 @@ http://localhost:8761
 
 ### my-spring-boot-api
 (use -Dserver.port as JVM startup parameter to specify a dedicated port for each instance)
+
 http://localhost:<server.port>/**
