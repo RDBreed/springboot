@@ -12,6 +12,7 @@ public class Orders {
 
     @RequestMapping(method=RequestMethod.GET, path="/orders/{id}")
     public @ResponseBody Order getOrder(@PathVariable  int id){
+
         return new Order(id, "testProduct", 1);
     }
 

@@ -1,11 +1,33 @@
-zuul:
-  routes:
-    myspringbootapi:
-      url: http://localhost:8090
+info:
+  component: Zuul Server
 
 ribbon:
   eureka:
-    enabled: false
+    enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 
 server:
   port: 8080
+
+zuul:
+  ignoredServices: '*'
+  routes:
+    myspringbootapi: /myspringbootapi/**
+
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
