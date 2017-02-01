@@ -1,6 +1,7 @@
 *.iml
 .idea
 *.log
+*.DS_Store
 my-springboot-api/.idea
 my-springboot-api/target
 my-zuul-router/target
