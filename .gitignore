@@ -6,3 +6,7 @@ my-zuul-router/target
 my-zuul-router/.idea
 my-eureka-server/target
 my-eureka-server/.idea
+springbootdemo-bookmark-service/target
+springbootdemo-bookmark-service/.idea
+gatling-test/target
+gatling-test/.idea

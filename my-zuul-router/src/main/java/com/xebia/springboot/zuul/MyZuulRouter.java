@@ -6,8 +6,8 @@ package com.xebia.springboot.zuul;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
-import org.springframework.context.annotation.Bean;
 import org.springframework.cloud.netflix.zuul.filters.route.ZuulFallbackProvider;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -20,6 +20,8 @@ import java.io.InputStream;
 @SpringBootApplication
 @EnableZuulProxy
 public class MyZuulRouter {
+
+
 
     @Bean
     public ZuulFallbackProvider zuulFallbackProvider() {
@@ -67,6 +69,7 @@ public class MyZuulRouter {
             }
         };
     }
+
     public static void main(String[] args) {
 
         SpringApplication.run(MyZuulRouter.class, args);
