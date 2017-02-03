@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: sample-service
+
+management:
+  context-path: /manage
+  port: 8081
