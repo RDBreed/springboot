@@ -1,4 +1,4 @@
-package com.xebia.myspringbootapp.services;
+package com.xebia.myspringbootapp.endpoints;
 
 import org.springframework.web.bind.annotation.*;
 import com.xebia.myspringbootapp.model.Order;
