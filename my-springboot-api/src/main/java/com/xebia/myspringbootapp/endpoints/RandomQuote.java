@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 public class RandomQuote {
 
 
-    @Autowired @Qualifier("randomQuoteREST2Impl")
+    @Autowired @Qualifier("randomQuoteRESTImpl")
     RandomQuoteDAO randomQuoteDAO;
 
 
