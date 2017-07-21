@@ -5,6 +5,8 @@ import com.xebia.myspringbootapp.endpoints.RandomQuote;
 import com.xebia.myspringbootapp.model.Quote;
 import com.xebia.myspringbootapp.model.Value;
 import com.xebia.myspringbootapp.services.dao.RandomQuoteDAO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -17,13 +19,17 @@ public class RandomQuoteDAORESTImpl implements RandomQuoteDAO {
 
     private final RestTemplate restTemplate;
 
+    private static Logger log = LoggerFactory.getLogger(RandomQuote.class);
+
     public RandomQuoteDAORESTImpl(RestTemplateBuilder builder) {
         this.restTemplate = builder.build();
     }
 
-    @HystrixCommand(commandKey = "RandomQuote", groupKey = "dummyService", fallbackMethod = "dummyQuoteFallback")
+    @HystrixCommand(commandKey = "RandomQuote", groupKey = "services", fallbackMethod = "dummyQuoteFallback")
     public Quote getRandomQuote(){
+        log.info("Before invoking RandomQuote");
         Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
+        log.info("After invoking RandomQuote: response: "+quote);
         return quote;
     }
 
