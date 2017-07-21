@@ -14,7 +14,7 @@ eureka:
 
 logging:
   level:
-    ROOT: DEBUG
+    ROOT: INFO
     org.springframework.web: DEBUG
     com.netflix.discovery: DEBUG
     org.springframework.cloud: DEBUG
